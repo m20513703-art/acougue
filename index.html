@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Açougue - Carnes, embutidos, churrasco, assados e encomendas."
+    >
+
+    <meta
+        name="theme-color"
+        content="#b40000"
+    >
+
+    <title>Açougue | Encomendas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         CABEÇALHO
+    ====================================================== -->
+
+    <header class="cabecalho">
+
+        <div class="logo">
+
+            <div class="logo-icone">
+                🥩
+            </div>
+
+            <div class="logo-texto">
+
+                <h1>AÇOUGUE</h1>
+
+                <p>
+                    Qualidade e confiança
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="botao-menu"
+            id="btnMenu"
+            type="button"
+            aria-label="Abrir menu"
+        >
+            ☰
+        </button>
+
+
+        <nav
+            class="navegacao"
+            id="navegacao"
+        >
+
+            <button type="button" data-aba="inicio">
+                Início
+            </button>
+
+            <button type="button" data-aba="bovina">
+                🥩 Bovina
+            </button>
+
+            <button type="button" data-aba="suina">
+                🐖 Suína
+            </button>
+
+            <button type="button" data-aba="frango">
+                🍗 Frango
+            </button>
+
+            <button type="button" data-aba="carneiro">
+                🐑 Carneiro
+            </button>
+
+            <button type="button" data-aba="embutidos">
+                🌭 Embutidos
+            </button>
+
+            <button type="button" data-aba="churrasco">
+                🔥 Churrasco
+            </button>
+
+            <button type="button" data-aba="assados">
+                🍗 Assados
+            </button>
+
+            <button
+                type="button"
+                class="botao-encomenda"
+                data-aba="encomenda"
+            >
+                🛒 Encomenda
+
+                <span id="contadorCarrinho">
+                    0
+                </span>
+
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         CONTEÚDO
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             INÍCIO
+        ================================================== -->
+
+        <section
+            id="inicio"
+            class="aba ativa"
+        >
+
+            <div class="hero">
+
+                <div class="hero-conteudo">
+
+                    <span class="hero-etiqueta">
+                        AÇOUGUE
+                    </span>
+
+                    <h2>
+                        Qualidade que
+                        <strong>chega à sua mesa.</strong>
+                    </h2>
+
+                    <p>
+                        Escolha suas carnes, monte sua
+                        encomenda pelo site e retire
+                        tudo no nosso açougue.
+                    </p>
+
+                    <div class="hero-botoes">
+
+                        <button
+                            type="button"
+                            class="botao-principal"
+                            data-aba="bovina"
+                        >
+                            🥩 Fazer encomenda
+                        </button>
+
+                        <button
+                            type="button"
+                            class="botao-secundario"
+                            id="btnLocalizacao"
+                        >
+                            📍 Como chegar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =============================================
+                 STATUS E HORÁRIOS
+            ============================================== -->
+
+            <section class="secao-informacoes">
+
+                <div class="titulo-secao">
+
+                    <span>
+                        AÇOUGUE
+                    </span>
+
+                    <h2>
+                        Estamos esperando por você
+                    </h2>
+
+                    <p id="statusFuncionamento">
+                        Verificando funcionamento...
+                    </p>
+
+                </div>
+
+
+                <div class="cartoes-informacao">
+
+
+                    <article class="cartao-informacao">
+
+                        <div class="icone">
+                            🕐
+                        </div>
+
+                        <h3>
+                            Segunda a sexta
+                        </h3>
+
+                        <p>
+                            08:00 às 18:00
+                        </p>
+
+                    </article>
+
+
+                    <article class="cartao-informacao">
+
+                        <div class="icone">
+                            🕐
+                        </div>
+
+                        <h3>
+                            Sábado
+                        </h3>
+
+                        <p>
+                            08:00 às 20:00
+                        </p>
+
+                    </article>
+
+
+                    <article class="cartao-informacao">
+
+                        <div class="icone">
+                            🕐
+                        </div>
+
+                        <h3>
+                            Domingo
+                        </h3>
+
+                        <p>
+                            08:00 às 13:00
+                        </p>
+
+                    </article>
+
+
+                    <article class="cartao-informacao">
+
+                        <div class="icone">
+                            🔥
+                        </div>
+
+                        <h3>
+                            Assados
+                        </h3>
+
+                        <p>
+                            Assados especiais nos fins de semana.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 NOSSO AÇOUGUE
+            ============================================== -->
+
+            <section class="secao-informacoes">
+
+                <div class="titulo-secao">
+
+                    <span>
+                        NOSSO AÇOUGUE
+                    </span>
+
+                    <h2>
+                        Tudo para sua mesa
+                    </h2>
+
+                    <p>
+                        Carnes, embutidos, produtos para
+                        churrasco e assados especiais.
+                    </p>
+
+                </div>
+
+
+                <div class="cartoes-informacao">
+
+
+                    <article class="cartao-informacao">
+
+                        <div class="icone">
+                            🥩
+                        </div>
+
+                        <h3>
+                            Carnes selecionadas
+                        </h3>
+
+                        <p>
+                            Carne bovina, suína,
+                            frango e carneiro.
+                        </p>
+
+                    </article>
+
+
+                    <article class="cartao-informacao">
+
+                        <div class="icone">
+                            🌭
+                        </div>
+
+                        <h3>
+                            Embutidos
+                        </h3>
+
+                        <p>
+                            Linguiças, hambúrgueres,
+                            medalhões e outros produtos.
+                        </p>
+
+                    </article>
+
+
+                    <article class="cartao-informacao">
+
+                        <div class="icone">
+                            🔥
+                        </div>
+
+                        <h3>
+                            Churrasco
+                        </h3>
+
+                        <p>
+                            Carnes, carvão, sal grosso
+                            e produtos para churrasco.
+                        </p>
+
+                    </article>
+
+
+                    <article class="cartao-informacao">
+
+                        <div class="icone">
+                            🍗
+                        </div>
+
+                        <h3>
+                            Assados
+                        </h3>
+
+                        <p>
+                            Frango assado e outros
+                            assados especiais no fim de semana.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 LOCALIZAÇÃO
+            ============================================== -->
+
+            <section class="bloco-localizacao">
+
+                <div class="localizacao-conteudo">
+
+                    <span>
+                        📍 ONDE ESTAMOS
+                    </span>
+
+                    <h2>
+                        Rua Guanabara, nº 26
+                    </h2>
+
+                    <p>
+                        Divinolândia - SP
+                    </p>
+
+                    <button
+                        type="button"
+                        class="botao-principal"
+                        id="btnMapa"
+                    >
+                        📍 Abrir localização
+                    </button>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+
+        <!-- =================================================
+             BOVINA
+        ================================================== -->
+
+        <section
+            id="bovina"
+            class="aba"
+        >
+
+            <div class="cabecalho-categoria">
+
+                <span>
+                    🥩 CARNES
+                </span>
+
+                <h2>
+                    Carne Bovina
+                </h2>
+
+                <p>
+                    Escolha os cortes que deseja
+                    colocar na sua encomenda.
+                </p>
+
+            </div>
+
+            <div
+                class="grade-produtos"
+                id="listaBovina"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SUÍNA
+        ================================================== -->
+
+        <section
+            id="suina"
+            class="aba"
+        >
+
+            <div class="cabecalho-categoria">
+
+                <span>
+                    🐖 CARNES
+                </span>
+
+                <h2>
+                    Carne Suína
+                </h2>
+
+                <p>
+                    Escolha os cortes de carne suína.
+                </p>
+
+            </div>
+
+            <div
+                class="grade-produtos"
+                id="listaSuina"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FRANGO
+        ================================================== -->
+
+        <section
+            id="frango"
+            class="aba"
+        >
+
+            <div class="cabecalho-categoria">
+
+                <span>
+                    🍗 AVES
+                </span>
+
+                <h2>
+                    Frango
+                </h2>
+
+                <p>
+                    Escolha os produtos de frango.
+                </p>
+
+            </div>
+
+            <div
+                class="grade-produtos"
+                id="listaFrango"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CARNEIRO
+        ================================================== -->
+
+        <section
+            id="carneiro"
+            class="aba"
+        >
+
+            <div class="cabecalho-categoria">
+
+                <span>
+                    🐑 CARNES
+                </span>
+
+                <h2>
+                    Carneiro
+                </h2>
+
+                <p>
+                    Escolha os cortes de carneiro.
+                </p>
+
+            </div>
+
+            <div
+                class="grade-produtos"
+                id="listaCarneiro"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             EMBUTIDOS
+        ================================================== -->
+
+        <section
+            id="embutidos"
+            class="aba"
+        >
+
+            <div class="cabecalho-categoria">
+
+                <span>
+                    🌭 EMBUTIDOS
+                </span>
+
+                <h2>
+                    Embutidos e Preparados
+                </h2>
+
+                <p>
+                    Produtos prontos para levar,
+                    preparar ou colocar no churrasco.
+                </p>
+
+            </div>
+
+            <div
+                class="grade-produtos"
+                id="listaEmbutidos"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CHURRASCO
+        ================================================== -->
+
+        <section
+            id="churrasco"
+            class="aba"
+        >
+
+            <div class="cabecalho-categoria">
+
+                <span>
+                    🔥 CHURRASCO
+                </span>
+
+                <h2>
+                    Churrasco
+                </h2>
+
+                <p>
+                    Produtos para deixar seu churrasco completo.
+                </p>
+
+            </div>
+
+            <div
+                class="grade-produtos"
+                id="listaChurrasco"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ASSADOS
+        ================================================== -->
+
+        <section
+            id="assados"
+            class="aba"
+        >
+
+            <div class="cabecalho-categoria">
+
+                <span>
+                    🍗 FIM DE SEMANA
+                </span>
+
+                <h2>
+                    Assados
+                </h2>
+
+                <p id="textoAssados">
+                    Confira nossos assados especiais.
+                </p>
+
+            </div>
+
+
+            <div
+                class="grade-produtos"
+                id="listaAssados"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ENCOMENDA
+        ================================================== -->
+
+        <section
+            id="encomenda"
+            class="aba"
+        >
+
+            <div class="cabecalho-categoria">
+
+                <span>
+                    🛒 SUA ENCOMENDA
+                </span>
+
+                <h2>
+                    Confira seu pedido
+                </h2>
+
+                <p>
+                    Revise os produtos e envie
+                    sua encomenda pelo WhatsApp.
+                </p>
+
+            </div>
+
+
+            <div class="encomenda-container">
+
+
+                <div class="lista-encomenda">
+
+                    <div
+                        id="listaCarrinho"
+                    ></div>
+
+                </div>
+
+
+
+                <div class="dados-encomenda">
+
+                    <h3>
+                        Dados para retirada
+                    </h3>
+
+
+                    <label for="nomeCliente">
+                        Nome
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nomeCliente"
+                        placeholder="Digite seu nome"
+                    >
+
+
+                    <label for="telefoneCliente">
+                        Telefone
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telefoneCliente"
+                        placeholder="(19) 99999-9999"
+                    >
+
+
+                    <label for="observacaoPedido">
+                        Observações
+                    </label>
+
+                    <textarea
+                        id="observacaoPedido"
+                        rows="4"
+                        placeholder="Ex.: separar em porções, cortar a carne..."
+                    ></textarea>
+
+
+                    <div class="informacao-retirada">
+
+                        <strong>
+                            📦 Retirada no local
+                        </strong>
+
+                        <p>
+                            Rua Guanabara, nº 26
+                        </p>
+
+                        <p>
+                            Divinolândia - SP
+                        </p>
+
+                        <small>
+                            💳 Pagamento realizado
+                            no momento da retirada.
+                        </small>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="botao-whatsapp"
+                        id="btnEnviarPedido"
+                    >
+                        📲 Enviar encomenda pelo WhatsApp
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="botao-limpar"
+                        id="btnLimparCarrinho"
+                    >
+                        Limpar encomenda
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         RODAPÉ
+    ====================================================== -->
+
+    <footer>
+
+        <div class="footer-conteudo">
+
+
+            <div class="footer-coluna">
+
+                <h2>
+                    🥩 AÇOUGUE
+                </h2>
+
+                <p>
+                    Qualidade, confiança
+                    e praticidade para você.
+                </p>
+
+            </div>
+
+
+            <div class="footer-coluna">
+
+                <h3>
+                    Horários
+                </h3>
+
+                <p>
+                    Segunda a sexta:
+                    08:00 às 18:00
+                </p>
+
+                <p>
+                    Sábado:
+                    08:00 às 20:00
+                </p>
+
+                <p>
+                    Domingo:
+                    08:00 às 13:00
+                </p>
+
+            </div>
+
+
+            <div class="footer-coluna">
+
+                <h3>
+                    Contato
+                </h3>
+
+                <p>
+                    📲 (19) 98112-3401
+                </p>
+
+                <p>
+                    📍 Rua Guanabara, nº 26
+                </p>
+
+                <p>
+                    Divinolândia - SP
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-final">
+
+            © 2026 Açougue —
+            Todos os direitos reservados.
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
